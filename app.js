@@ -35,6 +35,20 @@ function question(){
     return '<h3>' + message + '<h3>';
 }
 
+function inquiry(){
+
+    var answer = prompt('Do you like to drink wine? Answer yes or no.');
+    var reply;
+
+    if (answer === 'yes') {
+    reply = 'Man... you are my type of person!';
+    }
+    if (answer === 'no') {
+    reply = 'I really tried to like you, but I am sorry you just are not my type of people!';
+    }
+
+    return '<h3>' + reply + '<h3>';
+}
 
 
 
