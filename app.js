@@ -15,11 +15,9 @@ function welcome() {
     else {
         greeting = 'Welcome!';
     }
-
-
-
-    return '<h3>' + greeting + '</h3';
+    return '<h3>' + greeting + '</h3>';
 }
+
 function question(){
 
     var answer = prompt('do you like to eat cookies? Answer yes or no.');
@@ -40,6 +38,10 @@ function inquiry(){
     var answer = prompt('Do you like to drink wine? Answer yes or no.');
     var reply;
 
+    while( answer !== 'yes'){
+        var answer = prompt('Do you like to drink wine? You might want to answer yes!.');
+    }
+
     if (answer === 'yes') {
     reply = 'Man... you are my type of person!';
     }
@@ -53,14 +55,35 @@ function inquiry(){
 
 
 
+    function howMany(){
+        var count = prompt('Awesome, how many glasses do you think you will need tonight?');
 
-    // function askName (){
-    //     var username = prompt('What is your name?');
+        while (count === '' || isNaN(count)){
+            var count = prompt('Awsome, how many glasses do you think you will need tonight? Please enter a number');
+         }
 
-    //     return '<h3>' + 'hello, ' + username + '.' + '</h3>';
-    // }
+         return count;
+    }
 
-    //     var getName = function(){
-    //         var username + prompt ('Whats you\'re name?');
-    //     }
+    function showOrder(){
+        var item = '<img src="images/glass-wine.jpeg">';
+        var total = howMany();
+        var result = '';
+        
+        for(var i = 0; i < total; i++){
+            result = result + '<p>Glass #' + (i + 1) + '' + item + '</p>';
+        }
+        return result;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
 
